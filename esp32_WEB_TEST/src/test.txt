@@ -1,0 +1,51 @@
+</head>
+// <body>
+//   <canvas id="myChart" width="400" height="200"></canvas>
+//   <script>
+//     const ctx = document.getElementById('myChart').getContext('2d');
+//     const chart = new Chart(ctx, {
+//       type: 'line',
+//       data: {
+//         labels: [],
+//         datasets: [{
+//           label: 'Sensor Data',
+//           data: [],
+//           fill: false,
+//           borderColor: 'rgb(255, 99, 132)',
+//           tension: 0.1
+//         }]
+//       },
+//       options: {
+//         scales: {
+//           y: {
+//             beginAtZero: true,
+//             ticks: {
+//             min: 0, // 设置 y 轴的最小刻度值
+//             max: 250, // 设置 y 轴的最大刻度值
+//             stepSize: 5 // 设置刻度之间的间隔
+//     }
+//   }
+// }
+//       }
+//     });
+// function fetchData() {
+//   fetch('http://192.168.1.23:80/sensor') 
+//     .then(response => response.text())
+//     .then(data => {
+//       // 确保数据点数组不超过20个
+//       while (chart.data.labels.length > 200) {
+//         chart.data.labels.shift(); // 删除最旧的标签
+//         chart.data.datasets[0].data.shift(); // 删除最旧的数据点
+//       }
+
+//       // 添加新的标签和数据点
+//       chart.data.labels.push(new Date().toLocaleTimeString());
+//       chart.data.datasets[0].data.push(parseFloat(data));
+//       chart.update();
+//     })
+//     .catch(error => console.error(error));
+// }
+
+// setInterval(fetchData, 100);
+//   </script>
+// </body>
